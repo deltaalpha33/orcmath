@@ -19,7 +19,7 @@ public class CustomButton extends Button implements CustomLabel {
 	}
 	
 	public void CustomButton(int x, int y) {
-		
+		update();
 	}
 	
 	@Override

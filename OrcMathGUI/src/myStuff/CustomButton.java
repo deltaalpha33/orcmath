@@ -1,7 +1,9 @@
 package myStuff;
 
 import java.awt.Color;
+import java.awt.FontMetrics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
 import guiPlayer.CustomLabel;
 import guiTeacher.components.Action;
@@ -9,40 +11,38 @@ import guiTeacher.components.Button;
 
 public class CustomButton extends Button implements CustomLabel {
 
-	String String1;
-	String String2;
-	
+	public String String1;
+	public String String2;
+	private Color color;
 	
 	public CustomButton(int x, int y, int w, int h, String text, Action action) {
 		super(x, y, w, h, text, action);
-		// TODO Auto-generated constructor stub
-	}
-	
-	public void CustomButton(int x, int y) {
 		update();
+	}
+	public void CustomButton(int x, int y){
+		
 	}
 	
 	@Override
 	public void updateString1(String string) {
-		// TODO Auto-generated method stub
+		string = "Save Now";
 
 	}
 
 	@Override
 	public void updateString2(String string) {
-		// TODO Auto-generated method stub
-
+		string = "Cancel Now";
 	}
 
 	@Override
 	public void setIconColor(Color color) {
 		// TODO Auto-generated method stub
-		
-	}
 
-	public void drawButton(Graphics2D g, boolean hover) {
-		g.setColor(Color.BLACK);
-		
 	}
 	
+	public void drawButton(Graphics2D g, boolean hover){
+		g.setColor(Color.BLACK);
+		g.drawString(String1, 120, 135);
+	}
+
 }

@@ -72,5 +72,4 @@ public class FunctionCompositions extends DynamicType{
 		answerWork.finish();//cannot omit this or there will be an error!
 		answer=answerWork.getLatexTabular();
 	}
-	
 }

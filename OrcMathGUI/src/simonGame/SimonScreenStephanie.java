@@ -1,4 +1,4 @@
-package myStuff;
+package simonGame;
 
 import java.awt.Color;
 import java.util.ArrayList;

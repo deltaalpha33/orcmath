@@ -1,4 +1,4 @@
-package myStuff;
+package simonGame;
 
 import guiTeacher.GUIApplication;
 

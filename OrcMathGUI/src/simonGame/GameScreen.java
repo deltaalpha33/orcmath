@@ -16,6 +16,11 @@ public class GameScreen extends FullFunctionScreen {
 	private static final long serialVersionUID = 1L;
 	
 	private Button redButton;
+	private Button yellowButton;
+	private Button greenButton;
+	private Button cyanButton;
+	private Button pinkButton;
+	private Button orangeButton;
 	
 	
 	
@@ -107,12 +112,31 @@ public class GameScreen extends FullFunctionScreen {
 		viewObjects.add(redButton);
 		
 		
-		Button yellowButton = new Button(250, 150 ,50,50, "",Color.YELLOW, new Action() {
+		yellowButton = new Button(250, 150 ,50,50, "",Color.YELLOW, new Action() {
 			
 			@Override
 			public void act() {
-				buttonClick("yellow");
-				
+				Thread blinker = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						yellowButton.setBackground(Color.WHITE);
+						yellowButton.update();
+						
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						yellowButton.setBackground(Color.YELLOW);
+						yellowButton.update();
+					}
+				});
+			blinker.start();
+			buttonClick("yellow");
+			
 			}
 		} );
 		
@@ -121,12 +145,31 @@ public class GameScreen extends FullFunctionScreen {
 		
 		
 		
-		Button greenButton = new Button(250, 220 ,50,50, "",Color.GREEN, new Action() {
+		greenButton = new Button(250, 220 ,50,50, "",Color.GREEN, new Action() {
 			
 			@Override
 			public void act() {
-				buttonClick("green");
-				
+				Thread blinker = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						greenButton.setBackground(Color.WHITE);
+						greenButton.update();
+						
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						greenButton.setBackground(Color.GREEN);
+						greenButton.update();
+					}
+				});
+			blinker.start();
+			buttonClick("green");
+			
 			}
 		} );
 		
@@ -135,12 +178,31 @@ public class GameScreen extends FullFunctionScreen {
 		
 		
 		
-		Button cyanButton = new Button(300, 265 ,50,50, "",Color.CYAN, new Action() {
+		cyanButton = new Button(300, 265 ,50,50, "",Color.CYAN, new Action() {
 			
 			@Override
 			public void act() {
-				buttonClick("cyan");
-				
+				Thread blinker = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						cyanButton.setBackground(Color.WHITE);
+						cyanButton.update();
+						
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						cyanButton.setBackground(Color.CYAN);
+						cyanButton.update();
+					}
+				});
+			blinker.start();
+			buttonClick("cyan");
+			
 			}
 		} );
 		
@@ -149,24 +211,62 @@ public class GameScreen extends FullFunctionScreen {
 		
 		
 		
-		Button pinkButton = new Button(350, 220 ,50,50, "",Color.PINK, new Action() {
+		pinkButton = new Button(350, 220 ,50,50, "",Color.PINK, new Action() {
 			
 			@Override
 			public void act() {
-				buttonClick("pink");
-				
+				Thread blinker = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						pinkButton.setBackground(Color.WHITE);
+						pinkButton.update();
+						
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						pinkButton.setBackground(Color.PINK);
+						pinkButton.update();
+					}
+				});
+			blinker.start();
+			buttonClick("pink");
+			
 			}
 		} );
 		
 		pinkButton.setCurve(50, 50);
 		viewObjects.add(pinkButton);
 		
-		Button orangeButton = new Button(350, 150 ,50,50, "",Color.ORANGE, new Action() {
+		orangeButton = new Button(350, 150 ,50,50, "",Color.ORANGE, new Action() {
 			
 			@Override
 			public void act() {
-				buttonClick("orange");
-				
+				Thread blinker = new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						
+						orangeButton.setBackground(Color.WHITE);
+						orangeButton.update();
+						
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						orangeButton.setBackground(Color.ORANGE);
+						orangeButton.update();
+					}
+				});
+			blinker.start();
+			buttonClick("orange");
+			
 			}
 		} );
 		

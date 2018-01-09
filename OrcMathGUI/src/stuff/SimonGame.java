@@ -1,20 +1,22 @@
-package simonGame;
+package stuff;
 
 import guiTeacher.GUIApplication;
+import simonGame.SimonGameStephanie;
+import stuff.SimonGameScreen;
 
-public class SimonGameStephanie extends GUIApplication {
+public class SimonGame extends GUIApplication {
 
 	public static SimonGameStephanie game;
-	public static SimonScreenStephanie screen;
+	public static SimonGameScreen screen;
 	
-	public SimonGameStephanie(int width, int height) {
+	public SimonGame(int width, int height) {
 		super(width, height);
 		setVisible(true);
 	}
 
 	@Override
 	public void initScreen() {
-		screen = new SimonScreenStephanie(getWidth(), getHeight());
+		screen = new SimonGameScreen(getWidth(), getHeight());
 		setScreen(screen);
 
 	}
@@ -27,3 +29,4 @@ public class SimonGameStephanie extends GUIApplication {
 	}
 
 }
+

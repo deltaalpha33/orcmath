@@ -1,4 +1,4 @@
-package simonGame;
+package stuff;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import guiTeacher.components.TextLabel;
 import guiTeacher.interfaces.Visible;
 import guiTeacher.userInterfaces.ClickableScreen;
 
-public class SimonScreenStephanie extends ClickableScreen implements Runnable {
+public class SimonGameScreen extends ClickableScreen implements Runnable {
 
 	private TextLabel label;
 	private ButtonInterfaceStephanie[] buttons;
@@ -22,7 +22,7 @@ public class SimonScreenStephanie extends ClickableScreen implements Runnable {
 	private int sequenceIndex;
 	private int lastSelectedButton;
 
-	public SimonScreenStephanie(int width, int height) {
+	public SimonGameScreen(int width, int height) {
 		super(width, height);
 		Thread app = new Thread(this);
 		app.start();
